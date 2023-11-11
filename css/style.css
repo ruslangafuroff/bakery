@@ -31,11 +31,14 @@
     --color-primary-light: #faf4ea;
     --color-brand-dark: #465929;
     --color-brand-light: #819B57;
+    --color-secondary-dark: #A18268;
+   
 }
 
 /*Base*/
 body {
     color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -59,6 +62,8 @@ p {
 }
 
 ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -91,6 +96,7 @@ ul {
     border-radius: 8px;
     cursor: pointer;
 
+
 }
 
 .button:hover {
@@ -108,12 +114,44 @@ ul {
 
 .link:hover {
     color: var(--color-brand-light);
-    font-weight: 600;
+
 }
+
+/* Header */
+.header {
+    background-color: lightgray;
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
 
 /*Hero-section*/
 .hero-section {
     padding: 272px 0;
+    background-image: url(/images/hero-section-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
 }
 
 .hero-title {
@@ -128,14 +166,23 @@ ul {
 }
 
 /*Advantages section*/
-.advantages-list {
-    color: var(--color-primary-light);
+.advantages-section {
+    padding: 16px;
     background-color: var(--color-brand-light);
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+
 }
 
 .advantages-item {
     font-size: 20px;
     font-weight: 300;
+    color: var(--color-primary-light);
 }
 
 /*Section-title*/
@@ -151,13 +198,28 @@ ul {
 }
 
 /* Tradition selection */
+
+
 .traditions-section {
     padding-top: 96px;
+
+}
+
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.traditions-content {
+    max-width: 710px;
 }
 
 .traditions-title {
     margin-bottom: 42px;
 }
+
+
 
 .traditions-text .brand {
     color: var(--color-brand-light);
@@ -169,9 +231,37 @@ ul {
 
 }
 
+.traditions-text.limited {
+    max-width: 340px;
+
+}
+
 /* Chefs section */
 .chefs-title {
     margin-bottom: 80px;
+}
+
+.accent {
+    color: var(--color-brand-dark);
+}
+
+.chefs-title:before,
+.chefs-title:after {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+}
+
+.chef-photo {
+    /* width: 241px;
+   height: 390px;
+   margin-top: 264px;
+   border: 1px;
+     */
+    border-radius: 4px 4px 4px 200px;
+    /* border: 1px solid #A18268; */
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chef-title {
@@ -182,8 +272,30 @@ ul {
 }
 
 /* Formats section */
+.formats-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.formats-item {
+    flex-basis: calc((100% - 40px) / 3)
+}
+
+.format-card {
+    height: 444px;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+
+    border: 1px solid lightgray;
+    /* remove */
+    border-radius: 16px;
+}
+
 .formats-title {
-margin-bottom: 80px;
+    margin-bottom: 80px;
+
 }
 
 .format-title {
@@ -194,6 +306,7 @@ margin-bottom: 80px;
 .format-text {
     font-size: 14px;
     font-weight: 300;
+
 }
 
 /* Contact section */
@@ -217,4 +330,12 @@ margin-bottom: 80px;
 
 .address-copyright {
     font-size: 14px;
+}
+
+.footer {
+    background-color: var(--color-primary-dark);
+    background-image: url(/images/footer-background1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
