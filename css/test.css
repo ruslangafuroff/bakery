@@ -3,13 +3,22 @@
 }
 
 .parent {
+    display: flex;
+    align-items: center;
+    gap: 40px;
     padding: 20px;
   border: 1px dotted black;
 }
 
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
 
 .item.red {
-    position: relative;
+    
     width: 150px;
     height: 150px;
     background-color: red;
@@ -27,7 +36,8 @@
     background-color: blue;
 }
 
-.section-title{
-    background-color: burlywood;
-
+.item.orange {
+    width: 150px;
+    height:150px;
+    background-color: orange;
 }
